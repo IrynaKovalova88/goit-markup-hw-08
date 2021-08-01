@@ -1,6 +1,9 @@
 .social__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+.social__item:not(:last-child) {
+  margin-right: 10px;
 }
 .social__link {
   display: flex;
@@ -12,7 +15,8 @@
 }
 .team__social-link {
   fill: var(--social-icon);
-  transition: fill 250ms var(--timing-function), background-color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
 
   &:hover,
   &:focus {
