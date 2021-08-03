@@ -13,17 +13,17 @@
     justify-content: center;
     margin-bottom: 30px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 50px;
   }
 }
 .portfolio__item {
-  display: inline-block;
   margin-right: 8px;
-  &:nth-child(-n + 3) {
-    margin-bottom: 15px;
-  }
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+    &:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -105,7 +105,9 @@
 }
 .portfolio__jobs-content {
   display: block;
-  padding: 20px 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
   border-right: 1px solid var(--border-portfolio);
   border-bottom: 1px solid var(--border-portfolio);
   border-left: 1px solid var(--border-portfolio);

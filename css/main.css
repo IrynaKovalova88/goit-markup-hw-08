@@ -6,7 +6,6 @@
   --font-color: #212121;
   --secondary-color: #ffffff;
   --logo-header-color: #000000;
-  --logo-part-color: #2196f3;
   --text-color: #757575;
   --hero-background-color: #c4c4c4;
   --footer-background-color: #2f303a;
@@ -158,14 +157,21 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: var(--secondary-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function);
   padding: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -201,10 +207,18 @@ body {
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
+  line-height: 1.5;
   letter-spacing: 0.03em;
+  text-align: center;
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-title {
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form-field {
@@ -261,9 +275,18 @@ body {
 }
 
 .modal-form-message::placeholder {
+  font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-message::placeholder {
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+  }
 }
 
 .modal-form-message:focus {
@@ -274,11 +297,20 @@ body {
 .modal-form-checkbox-label {
   display: flex;
   align-items: center;
-  line-height: 1.714;
+  font-size: 11px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: var(--text-color);
   margin-top: 10px;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-checkbox-label {
+    font-size: 14px;
+    line-height: 1.714;
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form-checkbox-label::before {
@@ -315,10 +347,10 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
+  letter-spacing: 0.06em;
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   color: var(--secondary-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -338,11 +370,20 @@ body {
 
 .title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
-  text-align: center;
+  font-size: 28px;
+  line-height: 1.179;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    line-height: 1.167;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
 }
 
 .logo {
@@ -383,7 +424,7 @@ body {
 }
 
 .logo-part {
-  color: var(--logo-part-color);
+  color: var(--accent-color);
 }
 
 .footer__logo {
@@ -1146,19 +1187,23 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .portfolio__list {
     margin-bottom: 50px;
   }
 }
 
 .portfolio__item {
-  display: inline-block;
   margin-right: 8px;
 }
 
-.portfolio__item:nth-child(-n + 3) {
-  margin-bottom: 15px;
+@media screen and (max-width: 767px) {
+  .portfolio__item {
+    display: inline-block;
+  }
+  .portfolio__item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
 }
 
 .portfolio__button {
@@ -1249,7 +1294,9 @@ body {
 
 .portfolio__jobs-content {
   display: block;
-  padding: 20px 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
   border-right: 1px solid var(--border-portfolio);
   border-bottom: 1px solid var(--border-portfolio);
   border-left: 1px solid var(--border-portfolio);

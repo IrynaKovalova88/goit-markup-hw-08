@@ -5,16 +5,15 @@
 .modal-form-title {
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
+  @include font(20px, 1.5, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 12px;
+  @media screen and (min-width: 1200px) {
+    @include font(20px, 1.15, 0.03em);
+  }
 }
 .modal-form-field {
-  font-size: 12px;
-  line-height: 1.167;
-  letter-spacing: 0.01em;
+  @include font(12px, 1.167, 0.01em);
   color: var(--text-color);
   margin-bottom: 10px;
 }
@@ -62,9 +61,11 @@
   transition: border-color 250ms var(--timing-function);
 
   &::placeholder {
-    line-height: 1.143;
-    letter-spacing: 0.01em;
+    @include font(14px, 1.143, 0.01em);
     color: rgba(117, 117, 117, 0.5);
+    @media screen and (min-width: 1200px) {
+      @include font(12px, 1.167, 0.01em);
+    }
   }
   &:focus {
     outline: none;
@@ -75,11 +76,13 @@
 .modal-form-checkbox-label {
   display: flex;
   align-items: center;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
+  @include font(11px, 1.167, 0.03em);
   color: var(--text-color);
   margin-top: 10px;
   margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    @include font(14px, 1.714, 0.03em);
+  }
 
   &::before {
     display: block;
@@ -112,12 +115,10 @@
   display: block;
   margin: 0 auto;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
+  @include font(16px, 1.875, 0.06em);
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   color: var(--secondary-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
