@@ -104,8 +104,8 @@
 }
 
 .modal-form-link {
-  text-decoration-line: underline;
   color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .modal-form-submit {

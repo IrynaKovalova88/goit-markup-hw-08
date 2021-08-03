@@ -45,33 +45,49 @@
                 <use href="./images/icons.svg#icon-close"></use>
               </svg>
             </button>
-            <ul class="menu list">
-              <li class="menu__item">
-                <a class="menu__link link current" href="./index.html"
+            <ul class="mobile-menu__list list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link current" href="./index.html"
                   >Студия</a
                 >
               </li>
-              <li class="menu__item">
-                <a class="menu__link link" href="./portfolio.html">Портфолио</a>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="./portfolio.html"
+                  >Портфолио</a
+                >
               </li>
-              <li class="menu__item">
-                <a class="menu__link link" href="">Контакты</a>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link link" href="">Контакты</a>
               </li>
             </ul>
-            <ul class="contacts list">
-              <li class="contacts__item">
-                <a class="contacts__link link" href="mailto:info@devstudio.com">
-                  <svg class="contacts__icon" width="16" height="12">
-                    <use href="./images/icons.svg#icon-envelope"></use></svg
+            <ul class="mobile-contacts__list list">
+              <li class="mobile-contacts__item">
+                <a
+                  class="mobile-contacts__link mobile-contacts__tel-link link"
+                  href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-contacts__item">
+                <a
+                  class="mobile-contacts__link mobile-contacts__email-link link"
+                  href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="contacts__item">
-                <a class="contacts__link link" href="tel:+380961111111">
-                  <svg class="contacts__icon" width="10" height="16">
-                    <use href="./images/icons.svg#icon-smartphone"></use></svg
-                  >+38 096 111 11 11</a
-                >
+            </ul>
+            <ul class="mobile-social__list list">
+              <li class="mobile-social__item">
+                <a class="mobile-social__link link" href="#">Instagram</a>
+              </li>
+              <li class="mobile-social__item">
+                <a class="mobile-social__link link" href="#">Twitter</a>
+              </li>
+              <li class="mobile-social__item">
+                <a class="mobile-social__link link" href="#">Facebook</a>
+              </li>
+              <li class="mobile-social__item">
+                <a class="mobile-social__link link" href="#">LinkedIn</a>
               </li>
             </ul>
           </div>
@@ -782,7 +798,7 @@
             name="check"
           /><label for="accept-policy" class="modal-form-checkbox-label"
             >Соглашаюсь с рассылкой и принимаю&nbsp;
-            <a href="#" class="modal-form-link">Условия договора</a></label
+            <a href="#" class="modal-form-link link">Условия договора</a></label
           >
           <button type="submit" class="modal-form-submit">Отправить</button>
         </form>

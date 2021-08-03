@@ -305,8 +305,8 @@ body {
 }
 
 .modal-form-link {
-  text-decoration-line: underline;
   color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .modal-form-submit {
@@ -370,6 +370,13 @@ body {
 
 @media screen and (min-width: 768px) {
   .header__logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__logo {
     padding-top: 24px;
     padding-bottom: 25px;
   }
@@ -421,9 +428,11 @@ body {
   background-color: var(--accent-color);
 }
 
-.navigation,
-.contacts {
-  display: none;
+@media screen and (max-width: 767px) {
+  .navigation,
+  .contacts {
+    display: none;
+  }
 }
 
 .burger-button {
@@ -441,6 +450,12 @@ body {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 768px) {
+  .burger-button {
+    display: none;
+  }
+}
+
 .mobile-menu {
   position: fixed;
   z-index: 100;
@@ -448,7 +463,7 @@ body {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background-color: pink;
+  background-color: var(--secondary-color);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -482,9 +497,13 @@ body {
 
 .mobile-menu__container {
   position: relative;
-  min-height: 200px;
+  height: 100%;
   padding-top: 48px;
   padding-left: 40px;
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -495,6 +514,167 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.mobile-social__list {
+  display: flex;
+}
+
+.mobile-menu__link {
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  text-align: center;
+  transition: color 250ms var(--timing-function);
+}
+
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+  color: var(--accent-color);
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__tel-link {
+  font-size: 34px;
+  line-height: 1.176;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.mobile-contacts__email-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+}
+
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-social__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.222;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mobile-social__item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-social__item:not(:first-child) {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation,
+  .menu,
+  .contacts,
+  .contacts__link {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__link,
+  .contacts__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__link {
+    color: inherit;
+    transition: color 250ms var(--timing-function);
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .menu__link:hover, .menu__link:focus {
+    color: var(--accent-color);
+  }
+  .menu__link.current {
+    color: var(--accent-color);
+    position: relative;
+  }
+  .menu__link.current::after {
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts {
+    margin-left: auto;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__link {
+    color: var(--text-color);
+    transition: color 250ms var(--timing-function);
+  }
+  .contacts__link:hover, .contacts__link:focus {
+    color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
 }
 
 .hero {
