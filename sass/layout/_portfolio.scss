@@ -54,11 +54,13 @@
   }
 }
 .portfolio__jobs-list {
+  align-items: unset;
   @media screen and (min-width: 768px) {
     @include parentGrid();
   }
 }
 .portfolio__jobs-item {
+  display: flex;
   &:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -71,6 +73,8 @@
   }
 }
 .portfolio__jobs-link {
+  display: flex;
+  flex-direction: column;
   transition: box-shadow 250ms var(--timing-function),
     transform 250ms var(--timing-function);
 
@@ -104,10 +108,12 @@
   }
 }
 .portfolio__jobs-content {
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 20px 24px;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+  // padding-left: 24px;
   border-right: 1px solid var(--border-portfolio);
   border-bottom: 1px solid var(--border-portfolio);
   border-left: 1px solid var(--border-portfolio);
