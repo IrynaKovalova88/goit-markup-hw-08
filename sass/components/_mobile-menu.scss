@@ -63,6 +63,7 @@
 }
 .mobile-social__list {
   display: flex;
+  flex-wrap: wrap;
 }
 .mobile-menu__link {
   @include font(40px, 1.175, 0.02em);
