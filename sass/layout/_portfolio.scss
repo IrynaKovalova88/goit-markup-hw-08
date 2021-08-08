@@ -98,13 +98,19 @@
   color: var(--secondary-color);
   @include font(18px, 1.556, 0.03em);
   overflow: auto;
-  padding: 63px 24px;
+  padding: 77px 24px;
   transform: translateY(100%);
   transition: transform 250ms var(--timing-function);
 
   .portfolio__jobs-link:hover &,
   .portfolio__jobs-link:focus & {
     transform: translateY(-100%);
+  }
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
   }
 }
 .portfolio__jobs-content {
