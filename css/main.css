@@ -305,7 +305,7 @@ body.modal-open {
   max-width: 450px;
   height: 96vh;
   max-height: 609px;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 @media screen and (min-width: 1200px) {
