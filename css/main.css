@@ -1258,8 +1258,12 @@ body {
   }
 }
 
-.portfolio__jobs-item:not(:last-child) {
-  margin-bottom: 30px;
+.portfolio__jobs-item {
+  display: flex;
+}
+
+.portfolio__jobs-item:not(:first-child) {
+  margin-top: 30px;
 }
 
 @media screen and (min-width: 768px) {

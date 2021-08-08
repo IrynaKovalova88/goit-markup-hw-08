@@ -60,8 +60,9 @@
   }
 }
 .portfolio__jobs-item {
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  display: flex;
+  &:not(:first-child) {
+    margin-top: 30px;
   }
   @media screen and (min-width: 768px) {
     @include itemGrid();
