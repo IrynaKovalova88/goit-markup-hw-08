@@ -207,11 +207,19 @@ body {
 }
 
 .mobile-contacts__tel-link {
-  font-size: 34px;
+  font-size: 8vw;
   line-height: 1.176;
   letter-spacing: 0.02em;
   font-weight: 500;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-contacts__tel-link {
+    font-size: 34px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+  }
 }
 
 .mobile-contacts__email-link {

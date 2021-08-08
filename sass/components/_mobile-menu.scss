@@ -76,9 +76,12 @@
   margin-bottom: 32px;
 }
 .mobile-contacts__tel-link {
-  @include font(34px, 1.176, 0.02em);
+  @include font(8vw, 1.176, 0.02em);
   font-weight: 500;
   color: var(--accent-color);
+  @media screen and (min-width: 480px) {
+    @include font(34px, 1.176, 0.02em);
+  }
 }
 .mobile-contacts__email-link {
   font-weight: 500;
