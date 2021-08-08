@@ -78,7 +78,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  @include font(11px, 1.167, 0.03em);
+  @include font(12px, 1.167, 0.03em);
   color: var(--text-color);
   margin-top: 10px;
   margin-bottom: 30px;
@@ -93,9 +93,11 @@
     height: 15px;
     border: 2px solid var(--font-color);
     border-radius: 2px;
-    margin-right: 7px;
-    margin-left: 13px;
+    margin-right: 8px;
     cursor: pointer;
+    @media screen and (min-width: 1200px) {
+      margin-left: 12px;
+    }
   }
   .modal-form-checkbox:checked + &::before {
     background-color: var(--accent-color);
