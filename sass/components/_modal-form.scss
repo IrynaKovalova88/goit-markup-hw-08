@@ -95,9 +95,9 @@
     border-radius: 2px;
     margin-right: 8px;
     cursor: pointer;
-    @media screen and (min-width: 1200px) {
-      margin-left: 12px;
-    }
+    // @media screen and (min-width: 1200px) {
+    //   margin-left: 12px;
+    // }
   }
   .modal-form-checkbox:checked + &::before {
     background-color: var(--accent-color);

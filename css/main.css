@@ -467,12 +467,6 @@ body.modal-open {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1200px) {
-  .modal-form-checkbox-label::before {
-    margin-left: 12px;
-  }
-}
-
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
   background-color: var(--accent-color);
   background-image: url(../images/check.svg);
