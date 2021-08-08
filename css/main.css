@@ -296,12 +296,7 @@ body {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function);
   padding: 40px;
-}
-
-@media screen and (max-width: 479px) {
-  .modal {
-    width: 94vw;
-  }
+  width: 94vw;
 }
 
 @media screen and (min-width: 480px) and (max-width: 1199px) {
