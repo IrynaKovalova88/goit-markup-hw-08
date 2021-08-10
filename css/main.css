@@ -303,8 +303,6 @@ body.modal-open {
   padding: 40px;
   width: 96vw;
   max-width: 450px;
-  height: 96vh;
-  max-height: 609px;
   overflow-y: auto;
 }
 
@@ -1245,10 +1243,6 @@ body.modal-open {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio__jobs-list {
-  align-items: unset;
-}
-
 @media screen and (min-width: 768px) {
   .portfolio__jobs-list {
     display: flex;
@@ -1256,10 +1250,6 @@ body.modal-open {
     margin-top: -30px;
     margin-left: -30px;
   }
-}
-
-.portfolio__jobs-item {
-  display: flex;
 }
 
 .portfolio__jobs-item:not(:first-child) {
@@ -1281,8 +1271,6 @@ body.modal-open {
 }
 
 .portfolio__jobs-link {
-  display: flex;
-  flex-direction: column;
   transition: box-shadow 250ms var(--timing-function), transform 250ms var(--timing-function);
 }
 
@@ -1330,9 +1318,8 @@ body.modal-open {
 }
 
 .portfolio__jobs-content {
-  flex-grow: 1;
-  flex-direction: column;
   padding: 20px 24px;
+  padding-right: 0;
   border-right: 1px solid var(--border-portfolio);
   border-bottom: 1px solid var(--border-portfolio);
   border-left: 1px solid var(--border-portfolio);
